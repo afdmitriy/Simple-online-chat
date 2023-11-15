@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Chat</title>
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.min.js"
+         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"
+         integrity="sha512-zoJXRvW2gC8Z0Xo3lBbao5+AS3g6YWr5ztKqaicua11xHo+AvE1b0lT9ODgrHTmNUxeCw0Ry4BGRYZfXu70weg=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      ></script>
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+         crossorigin="anonymous"
+      />
+   </head>
+   <body>
+      <div class="container mt-4">
+         <div class="row">
+            <div class="col-8">
+               <div class="messages-list d-none">
+                  <h2>Messages</h2>
+                  <ul class="list-group"></ul>
+               </div>
+            </div>
+            <div class="col-4">
+               <div class="users-list d-none">
+                  <h2>Users</h2>
+                  <ul class="list-group"></ul>
+               </div>
+               <div class="login-form-container">
+                  <form class="login-form">
+                     <div class="form-group">
+                        <label for="nickname">Nickname</label>
+                        <input type="text" id="nickname" />
+                     </div>
+                     <button type="submit" class="btn btn-primary w-100">
+                        Login
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div class="message-form-container fixed-bottom">
+            <form class="message-form ml-2 mr-2 d-none">
+               <div class="form-row">
+                  <div class="col-10">
+                     <input
+                        id="message"
+                        type="text"
+                        class="form-control"
+                        placeholder="message"
+                     />
+                  </div>
+                  <div class="col-2">
+                     <button type="submit" class="btn btn-primary w-100">
+                        Send
+                     </button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </body>
+   <script src="./js/script.js"></script>
+</html>
